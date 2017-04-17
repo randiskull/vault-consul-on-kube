@@ -15,7 +15,7 @@ spec:
         fsGroup: 1000
       containers:
         - name: vault
-          image: "drud/vault:0.6.3-2"
+          image: "drud/vault:0.7.0"
           resources:
           resources:
             requests:
@@ -60,6 +60,8 @@ spec:
                 disable_mlock = true
           # VAULT_ADDR is provided only for convenience - so don't have to set when logging in.
           - name: VAULT_ADDR
+            value: http://localhost:9000
+          - name: VAULT_REDIRECT_ADDR
             value: http://localhost:9000
           readinessProbe:
             httpGet:
