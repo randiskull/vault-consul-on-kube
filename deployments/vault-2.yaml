@@ -15,7 +15,7 @@ spec:
         fsGroup: 1000
       containers:
         - name: vault
-          image: "vault:latest"
+          image: "cloudwerk/vault:latest"
           resources:
             requests:
               cpu: 300m
