@@ -1,5 +1,4 @@
-FROM vault:0.7.0
-MAINTAINER Randy Fay <rfay@newmediadenver.com>
+FROM vault:latest
 
 # Provide for envsubst from gettext
 RUN apk add --no-cache gettext curl
